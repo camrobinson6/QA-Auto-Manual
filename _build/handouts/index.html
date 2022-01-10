@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Automating Manual Tests | Devmountain Foundations</title>
+
+      <link
+        href="_static/pygments.css"
+        rel="stylesheet"
+        type="text/css"
+      />
+      <link href="_static/devmountain.css" rel="stylesheet" type="text/css" />
+          <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+          <link rel="stylesheet" type="text/css" href="_static/devmountain.css" />
+          <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+          <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+
+      <script src="_static/pdfobject.min.js"></script>
+      
+  </head>
+  <body>
+      <div id="handouts-container">
+        <header id="page-header">
+            <p id="project-title">Devmountain Foundations</p>
+            <p id="page-title">Automating Manual Tests</p>
+              <p id="backlink">
+                <a href="/"> &laquo; Back to Homepage </a>
+              </p>
+        </header>
+
+        <nav id="page-toc"><ul>
+<li><a class="reference internal" href="#">Automating Manual Tests</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#instructions">Instructions</a><ul>
+<li><a class="reference internal" href="#setup">Setup</a></li>
+<li><a class="reference internal" href="#automating-tests">Automating Tests</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+
+        <main id="page-content">
+            <section class="section" id="automating-manual-tests">
+<h1>Automating Manual Tests</h1>
+<section class="section" id="introduction">
+<h2>Introduction</h2>
+<p>In today’s lab, you’ll be writing more in-depth UI tests. Using Selenium, you should automate the tests that you planned out for <a class="reference external" href="https://helo.devmountain.com/#/" target="_blank">Helo</a> in the “Working in a Team” lab.</p>
+</section>
+<section class="section" id="instructions">
+<h2>Instructions</h2>
+<section class="section" id="setup">
+<h3>Setup</h3>
+<ol class="arabic">
+<li><p>Locate your test plan from the “Working in a Team” lab</p></li>
+<li><p>Download this lab exercise’s folder from Frodo</p></li>
+<li><p>In your terminal <code class="docutils literal notranslate"><span class="pre">cd</span></code> into that downloaded folder, run <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">install</span></code>, and open the folder up in VS Code</p></li>
+<li><p>Open up the <cite>package.json</cite> file and locate the test script – this is what happens when you execute <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">run</span> <span class="pre">test</span></code></p></li>
+<li><p>Take a look at the dependencies in here as well, when you ran <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">install</span></code>, these are the packages that were installed and stored in <cite>node_modules</cite></p></li>
+<li><p>In your folder, create a file called <cite>helo.test.js</cite> and do your basic setup</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>bring in <code class="docutils literal notranslate"><span class="pre">Builder</span></code> and <code class="docutils literal notranslate"><span class="pre">Capabilities</span></code> from <cite>selenium-webdriver</cite></p></li>
+<li><p>bring in <cite>chromedriver</cite></p></li>
+<li><p>create your <code class="docutils literal notranslate"><span class="pre">driver</span></code></p></li>
+<li><p>write a <code class="docutils literal notranslate"><span class="pre">beforeAll</span></code> and <code class="docutils literal notranslate"><span class="pre">afterAll</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Chromedriver</p>
+<div class="admonition-body docutils container">
+<p>If you’re concerned about Chromedriver working, make sure that you check what version of Chrome you’re using. If the number doesn’t match up with the Chromedriver version in the <code class="docutils literal notranslate"><span class="pre">package.json</span></code>, then you’ll need to fix it so they match. Either update Chrome so that it matches Chromedriver or install a different version of Chromedriver.</p>
+<p>To install a different version: delete the <cite>node_modules</cite> folder and <code class="docutils literal notranslate"><span class="pre">package-lock.json</span></code> files. <strong>Do not delete</strong> <code class="docutils literal notranslate"><span class="pre">package.json</span></code>. In <code class="docutils literal notranslate"><span class="pre">package.json</span></code>, change the Chromedriver version to match whatever version of Chrome you’re running. Run <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">i</span></code> again and you should have matching versions.</p>
+</div>
+</div>
+</section>
+<section class="section" id="automating-tests">
+<h3>Automating Tests</h3>
+<p>In this section, you’ll automate your tests from your Helo test plan. You can set them up in different files if you’d like, or write them all in your main test file.</p>
+<ol class="arabic simple">
+<li><p>Identify all the tests that can be automated</p></li>
+<li><p>Write a test function for each of them</p></li>
+<li><p>When you’re done, push your code to GitHub.</p></li>
+</ol>
+</section>
+</section>
+</section>
+
+        </main>
+
+        <footer id="page-footer">
+            <p>&copy; 2022 Devmountain</p>
+        </footer>
+      </div>
+
+      <script src="_static/main.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+  </body>
+</html>
